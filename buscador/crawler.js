@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { paginaExiste, salvarPagina } = require('./db');
+const { paginaExiste, salvarPagina, htmlPagina, linksPagina } = require('./db');
 
 const visitados = new Set();
 
@@ -36,3 +36,4 @@ async function crawlPagina(url) {
 
 // Iniciar com a página inicial
 crawlPagina('https://ronieldias.github.io/PI12025/filmes/blade_runner.html');
+
