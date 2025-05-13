@@ -1,6 +1,0 @@
-CREATE TABLE paginas (
-  id SERIAL PRIMARY KEY,
-  url TEXT UNIQUE NOT NULL,
-  conteudo TEXT,
-  links JSONB
-);
