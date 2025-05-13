@@ -11,13 +11,20 @@ const { paginaExiste, salvarPagina, htmlPagina, linksPagina, buscar } = pkg;
 //console.log('\n\n[*** PÁGINA NA ÍNTEGRA ***]:\n', await htmlPagina('https://ronieldias.github.io/PI12025/filmes/blade_runner.html'));
 
 // Passe o termo a ser procurado
-const termo = 'Matrix'; 
+const termo = 'viagem'; 
 const resultados = await buscar(termo);
 
 console.log(`\n\nTermo buscado: ${termo}`);
 console.log('### PONTUAÇÃO ###');
 
-console.table(resultados);
+
+//console.log(resultados);
+
+const resultadosComIndice = resultados.map((r, i) => ({
+  'posicao': i + 1,
+  ...r
+}));
+console.table(resultadosComIndice);
 
 /*
 for (const resultado of resultados) {

@@ -80,6 +80,7 @@ async function buscar(termo) {
 
     const regex = new RegExp(termo, 'gi');
     const ocorrenciasTermo = (conteudo.match(regex) || []).length;
+    if (ocorrenciasTermo == 0) continue;
     const pontosTermo = ocorrenciasTermo * 5;
 
     const autoreferencia = links.some(link => link.href === url);
@@ -88,11 +89,11 @@ async function buscar(termo) {
     const pontuacaoTotal = pontosAutoridade + pontosTermo + penalidade;
 
     resultados.push({
-      Pagina: url,
-      Ocorrencias: pontosTermo,
-      Links_Recebidos: pontosAutoridade,
-      Autoreferencia: penalidade,
-      Total: pontuacaoTotal
+      pagina: url,
+      ocorrencias: pontosTermo,
+      links_Recebidos: pontosAutoridade,
+      autoreferencia: penalidade,
+      total: pontuacaoTotal
     });
     
   }
