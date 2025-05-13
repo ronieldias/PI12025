@@ -16,7 +16,10 @@ async function crawlPagina(url) {
     $('a').each((_, el) => {
       const texto = $(el).text().trim();
       const href = $(el).attr('href');
-      if (href) links.push({ texto, href });
+      if (href){
+        const absHref = new URL(href, url).href;
+        links.push({ texto, href: absHref });
+      }
     });
 
     await salvarPagina(url, html, links);
