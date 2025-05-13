@@ -50,7 +50,12 @@ async function linksPagina(url){
 }
 
 
-// Outras funções a partir daqui...
+/*
+  TIPO: READ
+  OBJETIVO: buscar ocorrências de um termo nas páginas e retornar uma tabela ranqueada
+  PARÂMETROS: termo a ser buscado
+  RETORNO: resultados
+*/
 async function buscar(termo) {
   const res = await pool.query('SELECT url, conteudo, links FROM paginas');
   const paginas = res.rows;  

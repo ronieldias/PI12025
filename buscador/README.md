@@ -3,9 +3,9 @@
 ## 📦 Dependências
 
 - Node.js
-- PostgreSQL (com uma base de dados chamada `mPages` já criada)
+- PostgreSQL
 
-Antes de rodar o projeto, crie no banco mPages a tabela paginas com o seguinte comando SQL:
+Antes de rodar o projeto, crie no servidor uma base de dados de nome `mPages` e a seguinte tabela:
 ```sql
 CREATE TABLE paginas (
   id SERIAL PRIMARY KEY,
