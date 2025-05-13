@@ -2,8 +2,18 @@
 
 ## 📦 Dependências
 
-- [Node.js]
-- [PostgreSQL](com uma base de dados chamada `mPages` já criada)
+- Node.js
+- PostgreSQL (com uma base de dados chamada `mPages` já criada)
+
+Antes de rodar o projeto, crie no banco mPages a tabela paginas com o seguinte comando SQL:
+```sql
+CREATE TABLE paginas (
+  id SERIAL PRIMARY KEY,
+  url TEXT UNIQUE NOT NULL,
+  conteudo TEXT,
+  links JSONB
+);
+```
 
 ### 📁 Bibliotecas Node.js utilizadas
 
@@ -21,16 +31,6 @@ npm install dotenv pg axios cheerio
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 ```
 DATABASE_URL=postgresql://<usuario>:<senha>@localhost:5432/mPages
-```
-
-Antes de rodar o crawler, crie a tabela paginas com o seguinte comando SQL:
-```sql
-CREATE TABLE paginas (
-  id SERIAL PRIMARY KEY,
-  url TEXT UNIQUE NOT NULL,
-  conteudo TEXT,
-  links JSONB
-);
 ```
 
 Rodar o Crawler
