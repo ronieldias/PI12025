@@ -1,4 +1,4 @@
-// MENSAGEM ERRO GENÉRICA
+// QUESTÃO 01 e 02
 function mostrarErro(mensagem, idElemento) {
     var errorElement = document.getElementById(idElemento);
     errorElement.textContent = mensagem;
