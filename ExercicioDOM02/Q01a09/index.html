@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h2>Questão 03. Calcular taxa de engajamento</h2>
+    <label for="interacoes">Total de interações</label>
+    <input type="text" id="interacoes" placeholder="Interações"><br>
+    <label for="visualizacoes">Total de visualizações</label>
+    <input type="text" id="visualizacoes" placeholder="visualizações"><br>
+    <button id="botaoCalcular">Calcular</button>
+    <div id="mensagemErroTaxa" class="oculto"></div>
+    <div id="resultadoTaxa"></div>
+
+    <h2>Questão 04. Upload de imagem</h2>
+    <label for="uploadImagem">Upload de imagem</label>
+    <input type="file" id="uploadImagem" accept="image/*">
+    <button id="botaoCarregarImagem">Carregar imagem</button>
+    <div id="mensagemErroImagem" class="oculto"></div>
+    <div id="resultadoImagem"></div>
+
+    <h2>Questão 05. Upload de três imagens</h2>
+    <select name="listaImagens" id="listaImagens">
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsH7od4mLegv85lerGGdjUS_vfBhbh465L2iAVAR76LBCPtE7I0oNmNmhx1R0P2-Qd6DA&usqp=CAU">
+            Gato zangado</option>
+        <option src="https://i.pinimg.com/236x/51/30/77/5130770e4cdec78276415c649837bef0.jpg">Gato agressivo</option>
+        <option src="https://i.pinimg.com/236x/d8/dd/c8/d8ddc860abfebb68bdecfe67daa587bb.jpg">Gato joinha</option>
+    </select>
+    <button id="botaoCarregarImagemSelecionada">Carregar imagem selecionada</button>
+    <div id="mensagemErroImagemSelecao" class="oculto"></div>
+    <div id="resultadoImagemSelecionada"></div>
+
+
+    <h2>Questão 06. Redes Sociais</h2>
+    <div>
+        <input type="checkbox" id="facebook" name="redesSociais" value="Facebook">
+        <label for="facebook">Facebook</label>
+    </div>
+    <div>
+        <input type="checkbox" id="twitter" name="redesSociais" value="Twitter">
+        <label for="twitter">Twitter</label>
+    </div>
+    <div>
+        <input type="checkbox" id="instagram" name="redesSociais" value="Instagram">
+
+        <label for="instagram">Instagram</label>
+    </div>
+    <div>
+        <input type="checkbox" id="linkedin" name="redesSociais" value="LinkedIn">
+        <label for="linkedin">LinkedIn</label>
+    </div>
+    <div>
+        <input type="checkbox" id="tiktok" name="redesSociais" value="TikTok">
+        <label for="tiktok">TikTok</label>
+    </div>
+    <button type="button" id="enviarBtn">Enviar Seleção</button>
+    <div class="oculto" id="mensagemErroRedesSociais"></div>
+    <div id="redesSelecionadas"></div>
+
+
+    <h2>Questões 07, 08 e 09. Adicionar hashtags com tratamento e remoção</h2>
+    <label for="hashtag">Nova hashtag</label>
+    <input id="hashtag" type="text" placeholder="#hashtag">
+    <button id="botaoAddHashtag">Adicionar</button>
+    <div id="mensagemErroAddHashtag" class="oculto"></div>
+    <div id="resultadoAddHashtag"></div><br>
+    <button id="botaoRemoverHashtag">Remover Selecionada</button>
+    <button id="botaoExibirHashtags">Exibir</button>
+    <div id="mensagemErroExibirHashtag" class="oculto"></div>
+    <div id="resultadoExibirHashtags"></div>
+</body>
+
+</html>

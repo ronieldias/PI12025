@@ -1,0 +1,14 @@
+.oculto {
+    display: none;
+}
+
+#mensagemErroTaxa, #mensagemErroImagem, #mensagemErroRedesSociais, #mensagemErroImagemSelecao, #mensagemErroAddHashtag, #mensagemErroExibirHashtag {
+    color: red;
+    margin-top: 10PX;
+}
+
+#resultadoImagem {
+    max-width: 100%; 
+    height: auto;
+
+}
