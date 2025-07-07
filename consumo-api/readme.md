@@ -1,6 +1,6 @@
-# APIs Utilizadas no Projeto
+# Consumo de APIs públicas
 
-Este documento explica as três APIs utilizadas no projeto.
+Este documento detalha as seis APIs utilizadas no projeto.
 
 ## 1. API de Gatos Aleatórios (The Cat API)
 
